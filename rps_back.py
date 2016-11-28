@@ -25,11 +25,14 @@ def instructions(response):
 # one name (i.e. no spaces), must start with an upper case letter.
 # Return requirement: name
 def check_name(name):
+    
 
     error = "Somethings wrong"
 
-    if len(name) > 30:
-        rps.quit_game(error)
+    if (len(name) >= 2) and (len(name) <= 10) and (name[0].isupper()):
+        print name
+    else:
+        rps.quit_game(error) 
 
     # Use if statements, as above, to check if 'name' meets the requirements listed above. If it fails
     # any condition call rps.quit_game with an appropriate error message.
